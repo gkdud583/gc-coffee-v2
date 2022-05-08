@@ -4,13 +4,13 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class OrderItem {
-    private final Long orderItemId;
-    private final Long orderId;
-    private final Long productId;
-    private final int price;
-    private final int quantity;
-    private final LocalDateTime createdAt;
-    private final LocalDateTime updatedAt;
+    private Long orderItemId;
+    private Long orderId;
+    private Long productId;
+    private int price;
+    private int quantity;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public OrderItem(Long productId, int price, int quantity) {
         this.orderItemId = null;

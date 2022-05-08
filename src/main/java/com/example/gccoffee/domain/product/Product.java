@@ -1,18 +1,22 @@
 package com.example.gccoffee.domain.product;
 
 import com.example.gccoffee.Category;
+import com.example.gccoffee.exception.CustomException;
+
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+import static com.example.gccoffee.exception.ErrorCode.NOT_ENOUGH_STOCK_QUANTITY;
+
 public class Product {
-    private final Long productId;
-    private final Category category;
-    private final String productName;
-    private final int price;
-    private final int stockQuantity;
-    private final String description;
-    private final LocalDateTime createdAt;
-    private final LocalDateTime updatedAt;
+    private Long productId;
+    private Category category;
+    private String productName;
+    private int price;
+    private int stockQuantity;
+    private String description;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public Product(Category category, String productName, int price, int stockQuantity, String description) {
         this.productId = null;

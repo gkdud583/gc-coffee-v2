@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.Objects;
 
 public class Order {
-    private final Long orderId;
-    private final String email;
-    private final String address;
-    private final String postcode;
-    private final OrderStatus orderStatus;
-    private final List<OrderItem> orderItems;
-    private final LocalDateTime createdAt;
-    private final LocalDateTime updatedAt;
+    private Long orderId;
+    private String email;
+    private String address;
+    private String postcode;
+    private OrderStatus orderStatus;
+    private List<OrderItem> orderItems;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public Order(String email, String address, String postcode, List<OrderItem> orderItems) {
         this.orderId = null;
