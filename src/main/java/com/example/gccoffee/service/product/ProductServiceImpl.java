@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
     public void updateStockQuantity(Long productId, int quantity) {
         Product product = findById(productId);
         product.order(quantity);
-        productRepository.updateStockQuantity(productId, product.getStockQuantity() - quantity);
+        productRepository.updateStockQuantity(productId, product.getStockQuantity());
     }
 
     @Override
