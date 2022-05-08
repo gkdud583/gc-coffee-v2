@@ -40,6 +40,12 @@ public class Product {
         this.updatedAt = updatedAt;
     }
 
+    public void order(int quantity) {
+        if (this.stockQuantity < quantity) {
+            throw new CustomException(NOT_ENOUGH_STOCK_QUANTITY);
+        }
+        this.stockQuantity -= quantity;
+    }
     public Long getProductId() {
         return productId;
     }

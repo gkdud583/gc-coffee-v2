@@ -43,9 +43,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void updateStockQuantity(Long productId, int quantity) {
         Product product = findById(productId);
-        if (product.getStockQuantity() < quantity) {
-            throw new CustomException(NOT_ENOUGH_STOCK_QUANTITY);
-        }
+        product.order(quantity);
         productRepository.updateStockQuantity(productId, product.getStockQuantity() - quantity);
     }
 
